@@ -8,13 +8,14 @@ A ComfyUI extension that replaces the default spaghetti Bézier curves with clea
 
 - **Clean L-bend routing** — wires exit horizontally, bend at the destination's X, then travel vertically
 - **Sharp 90° corners** — no curves, no diagonals
-- **Signal colors preserved** — all of LiteGraph's built-in wire type colors and custom colors work as normal
-- **Animated flow dots** — the moving dots that show data flowing through a connection follow the L-path correctly
+- **Gutter coloring** — wires sharing the same corridor automatically render in a neutral gray, reducing visual clutter
+- **Exit ramps** — the last 48px of each segment near a node keeps the original signal color, so slot types are always readable at a glance
+- **Click to trace** — clicking any wire highlights its full path in its original signal color at double width, so you can follow it through a busy graph
+- **Animated flow dots** — the moving dots that show data flowing through a connection follow the L-path correctly and always render in signal color
 - **Non-destructive** — falls back to the original Bézier renderer if anything is missing
 
 ## Planned (coming soon)
 
-- **Phase 2 — Gutter coloring:** wires sharing the same corridor blend to a neutral color; only the short "exit ramp" near each node keeps the original signal color. Clicking a wire highlights its full path in its original color so you can trace it end to end.
 - **Phase 3 — Road routing:** nearest-neighbor pathfinding that treats the gaps between nodes as named roads, bundling wires onto shared routes and only diverging at the last moment.
 
 ## Installation
