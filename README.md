@@ -10,13 +10,14 @@ A ComfyUI extension that replaces the default spaghetti Bézier curves with clea
 - **Sharp 90° corners** — no curves, no diagonals
 - **Gutter coloring** — wires sharing the same corridor automatically render in a neutral gray, reducing visual clutter
 - **Exit ramps** — the last 48px of each segment near a node keeps the original signal color, so slot types are always readable at a glance
+- **Nearest-neighbor corridor routing** — wires snap to the centerline of the real gap between adjacent nodes, keeping them visible in the space between nodes rather than behind them. Falls back to a direct L-bend when no corridor exists
 - **Click to trace** — clicking any wire highlights its full path in its original signal color at double width, so you can follow it through a busy graph
 - **Animated flow dots** — the moving dots that show data flowing through a connection follow the L-path correctly and always render in signal color
 - **Non-destructive** — falls back to the original Bézier renderer if anything is missing
 
 ## Planned (coming soon)
 
-- **Phase 3 — Road routing:** nearest-neighbor pathfinding that treats the gaps between nodes as named roads, bundling wires onto shared routes and only diverging at the last moment.
+- Further tuning of corridor detection edge cases (loopback wires, group nodes, very dense graphs)
 
 ## Installation
 
